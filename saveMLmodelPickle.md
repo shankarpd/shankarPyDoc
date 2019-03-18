@@ -123,10 +123,7 @@ Now load the pickled modeled decision tree model.
 
 ## Loading the scikit learn models with Pickle
 
-2
-3
-4
-# Loading the saved decision tree model pickle
+#Loading the saved decision tree model pickle
 decision_tree_model_pkl = open(decision_tree_pkl_filename, 'rb')\n
 decision_tree_model = pickle.load(decision_tree_model_pkl)\n
 print ("Loaded Decision tree model :: ", decision_tree_model)\n
@@ -134,3 +131,19 @@ print ("Loaded Decision tree model :: ", decision_tree_model)\n
 1. Opening the decision_tree_pkl_filename in the read mode.
 2. Use the pickle load method to load the saved decison_tree_model.
 3. Print the loaded decision tree classifier.
+
+ing the saved decision tree pkl file
+Loaded Decision tree model ::  DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=3,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=5,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=False, random_state=100, splitter='best')
+
+Output:
+Loaded Decision tree model ::  DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=3,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=5,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=False, random_state=100, splitter='best')
+
+Once we successfully loaded the saved scikit learn models, we can use them in the general way to predict for test dataset or in the production servers.
+
+#----------Source content: taken from various article from web.
