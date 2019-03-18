@@ -112,4 +112,25 @@ pickle.dump(decision_tree_model, decision_tree_model_pkl)
 
 decision_tree_model_pkl.close()
 
+Steps:
+1. Created the decision_tree_pkl filename with the path where the pickled file where it needs to place.
+2. Using the filename opened and decision_tree_model_pkl in write mode.
+3. Calling the pickle dump method to perform the pickling the modeled decision tree classifier.
+4. Close the opened decision_tree_mdoel_pkl
 
+Now load the pickled modeled decision tree model.
+
+
+## Loading the scikit learn models with Pickle
+
+2
+3
+4
+# Loading the saved decision tree model pickle
+decision_tree_model_pkl = open(decision_tree_pkl_filename, 'rb')\n
+decision_tree_model = pickle.load(decision_tree_model_pkl)\n
+print ("Loaded Decision tree model :: ", decision_tree_model)\n
+
+1. Opening the decision_tree_pkl_filename in the read mode.
+2. Use the pickle load method to load the saved decison_tree_model.
+3. Print the loaded decision tree classifier.
