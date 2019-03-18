@@ -155,4 +155,4 @@ Model compatibility - One of the most frequent mistakes is saving your model wit
 
 One last issue with both Pickle and Joblib is related to security. Both tools could contain malicious code, so it is not recommended to restore data from untrusted or unauthenticated sources.
 
-#----------Source content: taken from various article from web.
+Source content taken from various web articles.
