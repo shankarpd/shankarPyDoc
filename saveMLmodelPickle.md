@@ -74,6 +74,42 @@ list_pickle.close()
 * Importing the Python Standard serialization package pickle.
 * Creating the python list object with 1 to 5 numbers.
 * Given the path to store the numbers list pickle (‘list_pickle.pkl’)
-** Open the list_pickle in write mode in the list_pickle.pkl path.
-** Use the dump method in pickle with numbers_list and the opened list_pickle to create pickle
-** Close the created pickle.
+* Open the list_pickle in write mode in the list_pickle.pkl path.
+* Use the dump method in pickle with numbers_list and the opened list_pickle to create pickle
+* Close the created pickle.
+
+With the above code list_picke.pkl will create in our local system. We can use this created pkl file where ever we would like to. Now let’s code to perform the unpickling to get use the pickled list object again.
+
+#unpickling the list object
+
+#Need to open the pickled list object into read mode
+
+list_pickle_path = 'list_pickle.pkl'
+list_unpickle = open(list_pickle_path, 'r')
+
+#load the unpickle object into a variable
+numbers_list = pickle.load(list_unpickle)
+
+print ("Numbers List :: ", numbers_list)
+
+* Open the list_pickle.pkl in the read mode.
+* Using the pickle load method to load the opened list_unpickle.
+* Print the number list again.
+
+# Dump the scikit learn models with Python Pickle
+
+#Dump the trained decision tree classifier with Pickle
+
+decision_tree_pkl_filename = 'deTree.pkl'
+
+#Open the file to save as pkl file
+
+decision_tree_model_pkl = open(decision_tree_pkl_filename, 'wb')
+
+pickle.dump(decision_tree_model, decision_tree_model_pkl)
+
+#Close the pickle instances
+
+decision_tree_model_pkl.close()
+
+
