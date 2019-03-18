@@ -146,4 +146,13 @@ Loaded Decision tree model ::  DecisionTreeClassifier(class_weight=None, criteri
 
 Once we successfully loaded the saved scikit learn models, we can use them in the general way to predict for test dataset or in the production servers.
 
+# Compatibility Issues
+While some of the pros and cons of each tool were covered in the text so far, probably the biggest drawback of the Pickle and Joblib tools is its compatibility over different models and Python versions.
+
+Python version compatibility - The documentation of both tools states that it is not recommended to (de)serialize objects across different Python versions, although it might work across minor version changes.
+
+Model compatibility - One of the most frequent mistakes is saving your model with Pickle or Joblib, then changing the model before trying to restore from file. The internal structure of the model needs to stay unchanged between save and reload.
+
+One last issue with both Pickle and Joblib is related to security. Both tools could contain malicious code, so it is not recommended to restore data from untrusted or unauthenticated sources.
+
 #----------Source content: taken from various article from web.
