@@ -54,3 +54,26 @@ The objects can be anything. Suppose we perform the python pickling on a python 
 * Pickle already pickled python object
 * Pickle high recursive Python objects
 
+# Python Pickle Examples
+Before we pickle the scikit learn models. Let’s quickly see an example on how to pickle and unpickle the Python list objects.
+
+Pickle the Python List object
+import pickle
+ 
+# pickle list object
+
+Python Code: 
+numbers_list = [1, 2, 3, 4, 5]
+list_pickle_path = 'list_pickle.pkl'
+ 
+#Create an variable to pickle and open it in write mode
+list_pickle = open(list_pickle_path, 'wb')
+pickle.dump(numbers_list, list_pickle)
+list_pickle.close()
+
+* Importing the Python Standard serialization package pickle.
+* Creating the python list object with 1 to 5 numbers.
+* Given the path to store the numbers list pickle (‘list_pickle.pkl’)
+** Open the list_pickle in write mode in the list_pickle.pkl path.
+** Use the dump method in pickle with numbers_list and the opened list_pickle to create pickle
+** Close the created pickle.
