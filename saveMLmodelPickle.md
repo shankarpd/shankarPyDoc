@@ -34,13 +34,13 @@ Let’s first understand about the functionality of the Pickle library. Then we 
 # What is Pickle?
 Pickle is one of the Python standard libraries. Which is so powerful and the best choice to perform the task like
 
-* Serialization
-* Marshalling
+### Serialization
+### Marshalling
 The above two functionalities are popularly known as  Pickling and Unpickling
 
-* Pickling
+### Pickling
 - Pickling is the process converting any Python object into a stream of bytes by following the hierarchy of the object we are trying to convert.
-* Unpickling
+### Unpickling
 - Unpickling is the process of converting the pickled (stream of bytes) back into to the original Python object by following the object hierarchy
 The objects can be anything. Suppose we perform the python pickling on a python list or dictionary object also. Below is the list of what kind of objects can pickle and what kind of objects should not pickle.
 
